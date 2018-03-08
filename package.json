@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "8.x"
+    "node": ">=8.x"
   },
   "scripts": {
     "lint": "run-p lint:*",
