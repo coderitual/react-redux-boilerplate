@@ -19,7 +19,7 @@
     "build-storybook": "build-storybook",
     "vrtest": "./node_modules/.bin/wdio wdio.vr.conf.js"
   },
-  "author": "",
+  "author": "coderitual",
   "license": "ISC",
   "dependencies": {
     "@storybook/addon-actions": "^3.2.16",
