@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import UsersRendered from '../components/UsersRendered';
 
 class Users extends Component {
@@ -10,7 +9,7 @@ class Users extends Component {
     this.handleChangeStateClick = this.handleChangeStateClick.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     const { fetchUsers } = this.props;
     fetchUsers();
   }
