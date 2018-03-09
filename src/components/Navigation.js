@@ -4,22 +4,18 @@ import { Link } from 'react-router-dom';
 class Navigation extends Component {
   render() {
     return (
-      <div className="row">
-        <nav className="navbar navbar-dark bg-dark fixed-top mr-auto">
-          <ul className="nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                Index
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/users/">
-                Git Users
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <ul className="nav">
+        <li className="nav__item">
+          <Link className="nav__link" to="/">
+            Index
+          </Link>
+        </li>
+        <li className="nav__item">
+          <Link className="nav__link" to="/users/">
+            Git Users
+          </Link>
+        </li>
+      </ul>
     );
   }
 }

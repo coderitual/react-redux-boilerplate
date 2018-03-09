@@ -1,59 +1,54 @@
 import React, { Component } from 'react';
-import UsersRendered from '../components/UsersRendered';
+import User from '../components/User';
 
 class Users extends Component {
-  constructor() {
-    super();
-    this.handleAdminsClick = this.handleAdminsClick.bind(this);
-    this.handleUsersClick = this.handleUsersClick.bind(this);
-    this.handleChangeStateClick = this.handleChangeStateClick.bind(this);
-  }
-
   componentDidMount() {
     const { fetchUsers } = this.props;
     fetchUsers();
   }
 
-  handleAdminsClick() {
+  handleAdminsClick = () => {
     const { changeAdminFilter } = this.props;
     changeAdminFilter();
-  }
+  };
 
-  handleUsersClick() {
+  handleUsersClick = () => {
     const { changeUserFilter } = this.props;
     changeUserFilter();
-  }
+  };
 
-  handleChangeStateClick() {
+  handleChangeStateClick = () => {
     const { changePrtOfState } = this.props;
     changePrtOfState();
-  }
+  };
 
   render() {
     const { users } = this.props;
-    console.log('re-render');
     return (
       <div>
-        <div className="mt-5 mb-5">
-          <button className="btn btn-primary m-2" onClick={this.handleAdminsClick}>
+        <div className="filters">
+          <button className="filters__button" onClick={this.handleAdminsClick}>
             Show Git Admins
           </button>
-          <button className="btn btn-primary m-2" onClick={this.handleUsersClick}>
+          <button className="filters__button" onClick={this.handleUsersClick}>
             Show Git Users
           </button>
-          <button className="btn btn-danger m-2" onClick={this.handleChangeStateClick}>
+          <button
+            className="filters__button"
+            onClick={this.handleChangeStateClick}
+          >
             Change unrelated part of state
           </button>
         </div>
-        <div className="card-columns">
+        <div className="cards">
           {users
-            ? users.map(l => (
-                <UsersRendered
-                  key={l.id.toString()}
-                  login={l.login}
-                  className="card card-inverse"
-                  avatar={l.avatar_url}
-                  admin={l.site_admin}
+            ? users.map(user => (
+                <User
+                  key={user.id}
+                  login={user.login}
+                  className="card"
+                  avatar={user.avatar_url}
+                  admin={user.site_admin}
                 />
               ))
             : null}

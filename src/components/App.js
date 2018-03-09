@@ -4,7 +4,7 @@ import routes from '../routes/routes';
 
 class Root extends Component {
   render() {
-    return <div className="container mt-5">{routes}</div>;
+    return <div className="app">{routes}</div>;
   }
 }
 

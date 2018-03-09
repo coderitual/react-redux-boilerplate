@@ -2,7 +2,7 @@ const intitalState = {
   entities: [],
   adminsOnly: false,
   isFetching: false,
-  partOfState: true,
+  counter: 0,
 };
 
 const usersReducer = (state = intitalState, action) => {
@@ -28,10 +28,10 @@ const usersReducer = (state = intitalState, action) => {
         ...state,
         adminsOnly: false,
       };
-    case 'CHANGE_PART_OF_STATE':
+    case 'CHANGE_COUNTER':
       return {
         ...state,
-        partOfState: !state.partOfState,
+        counter: counter++,
       };
     default:
       return state;

@@ -7,7 +7,7 @@ import {
   changeUserFilter,
   changePrtOfState,
 } from '../actions/users';
-import { getFilteredDataReselect } from '../selectors/selectors';
+import { getFilteredDataReselect } from '../selectors/users';
 
 const UsersContainer = props => <Users {...props} />;
 

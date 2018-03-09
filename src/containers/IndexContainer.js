@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Index from '../components/Index';
+import Home from '../components/Home';
 
-const IndexContainer = props => <Index {...props} />;
+const IndexContainer = props => <Home {...props} />;
 
 export default connect(null, null)(IndexContainer);
