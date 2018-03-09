@@ -1,5 +1,15 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import Home from '../components/Home';
+import React, { Component } from 'react';
+import image from '../../assets/image.jpeg';
 
-export default connect(null, null)(Home);
+class Home extends Component {
+  render() {
+    return (
+      <div className="home">
+        <h1>Home page</h1>
+        <img src={image} alt="home" />
+      </div>
+    );
+  }
+}
+
+export default Home;
