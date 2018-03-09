@@ -25,7 +25,8 @@ class Users extends Component {
   render() {
     const { users } = this.props;
     return (
-      <div>
+      <div className="users">
+        <h1>Users page</h1>
         <div className="filters">
           <button className="filters__button" onClick={this.handleAdminsClick}>
             Show Git Admins
