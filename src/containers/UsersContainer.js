@@ -1,25 +1,22 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import Users from '../components/Users';
 import {
   fetchUsers,
   changeAdminFilter,
   changeUserFilter,
-  changePrtOfState,
+  changeCounter,
 } from '../actions/users';
 import { getFilteredDataReselect } from '../selectors/users';
-
-const UsersContainer = props => <Users {...props} />;
 
 const mapStateToProps = state => ({
   users: getFilteredDataReselect(state),
 });
 
 const mapDispatchToProps = {
-  fetchUsers,
-  changeAdminFilter,
-  changeUserFilter,
-  changePrtOfState,
+  onInit: fetchUsers,
+  onChangeAdminFilter: changeAdminFilter,
+  onChangeUserFilter: changeUserFilter,
+  onDummyButtonClick: changeCounter,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(Users);

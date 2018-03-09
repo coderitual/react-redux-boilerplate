@@ -3,23 +3,23 @@ import User from '../components/User';
 
 class Users extends Component {
   componentDidMount() {
-    const { fetchUsers } = this.props;
-    fetchUsers();
+    const { onInit } = this.props;
+    onInit();
   }
 
   handleAdminsClick = () => {
-    const { changeAdminFilter } = this.props;
-    changeAdminFilter();
+    const { onChangeAdminFilter } = this.props;
+    onChangeAdminFilter();
   };
 
   handleUsersClick = () => {
-    const { changeUserFilter } = this.props;
-    changeUserFilter();
+    const { onChangeUserFilter } = this.props;
+    onChangeUserFilter();
   };
 
   handleChangeStateClick = () => {
-    const { changePrtOfState } = this.props;
-    changePrtOfState();
+    const { onDummyButtonClick } = this.props;
+    onDummyButtonClick();
   };
 
   render() {

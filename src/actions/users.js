@@ -23,6 +23,6 @@ export const changeUserFilter = () => ({
   type: 'CHANGE_USER_FILTER',
 });
 
-export const changePrtOfState = () => ({
-  type: 'CHANGE_PART_OF_STATE',
+export const changeCounter = () => ({
+  type: 'CHANGE_COUNTER',
 });
