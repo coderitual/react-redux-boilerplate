@@ -15,9 +15,11 @@ const mapStateToProps = state => ({
   users: getFilteredDataReselect(state),
 });
 
-export default connect(mapStateToProps, {
+const mapDispatchToProps = state => ({
   fetchUsers,
   changeAdminFilter,
   changeUserFilter,
   changePrtOfState,
-})(UsersContainer);
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);

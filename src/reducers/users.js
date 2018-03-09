@@ -31,7 +31,7 @@ const usersReducer = (state = intitalState, action) => {
     case 'CHANGE_COUNTER':
       return {
         ...state,
-        counter: counter++,
+        counter: state.counter++,
       };
     default:
       return state;

@@ -30,7 +30,7 @@ const handleJSON = response =>
 const handleText = response =>
   response.text().then(text => {
     if (response.ok) {
-      return json;
+      return text;
     }
     return Promise.reject({
       status: response.status,
