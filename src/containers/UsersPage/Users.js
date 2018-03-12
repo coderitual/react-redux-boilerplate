@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import User from '../components/User';
+import User from './User';
 
 class Users extends Component {
   componentDidMount() {

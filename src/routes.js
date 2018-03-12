@@ -1,16 +1,15 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import HomePage from '../containers/HomePage';
-import UsersPage from '../containers/UsersPage';
-import Navigation from '../components/Navigation';
+import Layout from './components/Layout';
+import HomePage from './containers/HomePage';
+import UsersPage from './containers/UsersPage';
 
 const routes = (
-  <div>
-    <Route component={Navigation} />
+  <Layout>
     <Route exact path="/" component={HomePage} />
     <Route path="/users/" component={UsersPage} />
-  </div>
+  </Layout>
 );
 
 export default routes;
