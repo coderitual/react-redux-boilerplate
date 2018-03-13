@@ -1,3 +1,4 @@
+// @ts-check --jsx
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -8,8 +9,7 @@ import User from './User';
 
 class Users extends Component {
   componentDidMount() {
-    const { fetchUsers } = this.props;
-    fetchUsers();
+    this.props.fetchUsers();
   }
 
   handleAdminsClick = () => {
@@ -17,7 +17,7 @@ class Users extends Component {
   };
 
   handleUsersClick = () => {
-    this.props.changeAdminFilter();
+    this.props.changeUserFilter();
   };
 
   handleChangeStateClick = () => {
