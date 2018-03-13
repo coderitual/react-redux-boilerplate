@@ -1,7 +1,10 @@
 // -----------------
-// ACTIONS
+// CONSTS
 
 const INCREMENT = 'counter/INCREMENT';
+
+// -----------------
+// ACTIONS
 
 export const actions = {
   increment: () => ({

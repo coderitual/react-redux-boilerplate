@@ -2,27 +2,34 @@ import { callApi } from '../utils/api.js';
 import { createSelector } from 'reselect';
 
 // -----------------
-// ACTIONS
+// CONSTS
 
 const FETCH_USERS_REQUEST = 'users/FETCH_USERS_REQUEST';
 const FETCH_USERS_SUCCESS = 'users/FETCH_USERS_SUCCESS';
 const CHANGE_ADMIN_FILTER = 'users/CHANGE_ADMIN_FILTER';
 const CHANGE_USER_FILTER = 'users/CHANGE_USER_FILTER';
 
+// -----------------
+// ACTIONS
+
+const fetchUsers = () => async dispatch => {
+  dispatch({ type: FETCH_USERS_REQUEST });
+  const users = await callApi('https://api.github.com/users');
+  dispatch({ type: FETCH_USERS_SUCCESS, users });
+};
+
+const changeAdminFilter = () => ({
+  type: CHANGE_ADMIN_FILTER,
+});
+
+const changeUserFilter = () => ({
+  type: CHANGE_USER_FILTER,
+});
+
 export const actions = {
-  fetchUsers: () => async dispatch => {
-    dispatch({ type: FETCH_USERS_REQUEST });
-    const users = await callApi('https://api.github.com/users');
-    dispatch({ type: FETCH_USERS_SUCCESS, users });
-  },
-
-  changeAdminFilter: () => ({
-    type: CHANGE_ADMIN_FILTER,
-  }),
-
-  changeUserFilter: () => ({
-    type: CHANGE_USER_FILTER,
-  }),
+  fetchUsers,
+  changeAdminFilter,
+  changeUserFilter,
 };
 
 // -----------------
@@ -31,7 +38,7 @@ export const actions = {
 const getUsers = state => state.users.entities;
 const getAdminsOnly = state => state.users.adminsOnly;
 
-const getFilteredDataReselect = createSelector(
+const getFilteredUsers = createSelector(
   getUsers,
   getAdminsOnly,
   (users, filter) => {
@@ -44,7 +51,7 @@ const getFilteredDataReselect = createSelector(
 export const selectors = {
   getUsers,
   getAdminsOnly,
-  getFilteredDataReselect,
+  getFilteredUsers,
 };
 
 // -----------------
