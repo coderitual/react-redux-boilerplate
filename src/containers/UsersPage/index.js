@@ -13,7 +13,7 @@ class Users extends Component {
   }
 
   handleAdminsClick = () => {
-    this.props.changeUserFilter();
+    this.props.changeAdminFilter();
   };
 
   handleUsersClick = () => {
@@ -62,7 +62,7 @@ class Users extends Component {
 }
 
 Users.propTypes = {
-  users: PropTypes.object,
+  users: PropTypes.array.isRequired,
   increment: PropTypes.func.isRequired,
   fetchUsers: PropTypes.func.isRequired,
   changeAdminFilter: PropTypes.func.isRequired,
