@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "Michał Skowronek"
+    "name": "coderitual"
   },
   "dependencies": {
     "react": "^16.4.2",
@@ -21,6 +21,6 @@
   },
   "devDependencies": {
     "docz": "^0.9.5",
-    "react-test-renderer": "^16.4.2"
+    "react-testing-library": "^4.1.6"
   }
 }
