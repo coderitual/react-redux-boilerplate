@@ -2,6 +2,9 @@
   "name": "rr-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Michał Skowronek"
+  },
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
