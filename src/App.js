@@ -11,8 +11,15 @@ injectGlobal`
 `;
 
 class App extends Component {
+  state = {
+    text: 'world',
+  };
   render() {
-    return <div className="app">Hello</div>;
+    return (
+      <div className="app" onClick={() => this.setState({ text: 'you' })}>
+        Hello {this.state.text}
+      </div>
+    );
   }
 }
 

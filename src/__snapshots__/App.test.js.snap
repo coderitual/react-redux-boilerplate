@@ -4,6 +4,16 @@ exports[`App renders correctly 1`] = `
 <div
   class="app"
 >
-  Hello
+  Hello 
+  world
+</div>
+`;
+
+exports[`App renders correctly 2`] = `
+<div
+  class="app"
+>
+  Hello 
+  you
 </div>
 `;
