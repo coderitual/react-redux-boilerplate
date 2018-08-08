@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app reducer adds user 1`] = `
+Array [
+  "mike",
+]
+`;
+
+exports[`app reducer has correct inital value 1`] = `Array []`;
