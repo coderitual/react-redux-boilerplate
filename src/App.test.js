@@ -6,6 +6,8 @@ test('App renders correctly', () => {
   const { container, getByText } = render(<App />);
   expect(container.firstChild).toMatchSnapshot();
 
+  expect(container.firstChild).toHaveClass('app');
+
   fireEvent.click(getByText('Hello world'));
   expect(container.firstChild).toMatchSnapshot();
 });

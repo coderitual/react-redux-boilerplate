@@ -2,7 +2,7 @@
 
 exports[`App renders correctly 1`] = `
 <div
-  class="app"
+  class="app main"
 >
   Hello 
   world
@@ -11,7 +11,7 @@ exports[`App renders correctly 1`] = `
 
 exports[`App renders correctly 2`] = `
 <div
-  class="app"
+  class="app main"
 >
   Hello 
   you
